@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LinkedList\StackQueue.csproj" />
+    <ProjectReference Include="..\LinearDataStructures\LinearDataStructures.csproj" />
   </ItemGroup>
 
 </Project>
