@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Trees
 {
@@ -36,7 +33,7 @@ namespace Trees
             //var list = new List<Node<T>>();
             foreach (var element in node.Children)
             {
-                //list.AddRange(DFS(element))
+                //list.AddRange(DFS(element))   
                 DFS(element, spaces + 3);
             }
             //return list;
