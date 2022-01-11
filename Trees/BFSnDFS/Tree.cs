@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Trees
+namespace Trees.BFSnDFS
 {
     public class Tree<T>
     {
+        
         public Tree(Node<T> root)
         {
             this.Root = root;
