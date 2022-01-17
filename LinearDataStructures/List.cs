@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace List
+﻿namespace List
 {
     public class List<T>
     {

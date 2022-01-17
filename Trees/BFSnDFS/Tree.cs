@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Trees.BFSnDFS
+﻿namespace Trees.BFSnDFS
 {
     public class Tree<T>
     {

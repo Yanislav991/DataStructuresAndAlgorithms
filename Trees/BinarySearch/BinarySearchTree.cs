@@ -1,8 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-
-namespace Trees
+﻿namespace Trees.BinarySearch
 {
     public class BinarySearchTree<T> where T : IComparable<T>
     {
