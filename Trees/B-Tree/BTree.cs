@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+
 namespace Trees.B_Tree
 {
     public class BTree<T> where T : IComparable<T>
@@ -127,10 +129,13 @@ namespace Trees.B_Tree
             }
             for (int i = 0; i < node.KeysNumber; i++)
             {
-                Console.WriteLine(node.Keys[i] + " ");
+                Console.Write(node.Keys[i]+ " ");
+                
             }
+            Console.WriteLine();
             if (!node.IsLeaf)
             {
+                
                 for (int i = 0; i < node.KeysNumber + 1; i++)
                 {
                     Show(node.Children[i]);
@@ -148,6 +153,7 @@ namespace Trees.B_Tree
                 return false;
             }
         }
-
+       
+        //TODO : Remove
     }
 }

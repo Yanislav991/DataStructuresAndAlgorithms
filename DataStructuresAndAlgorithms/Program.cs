@@ -1,4 +1,5 @@
-﻿using Trees.B_Tree;
+﻿using System;
+using Trees.B_Tree;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -17,13 +18,13 @@ namespace DataStructuresAndAlgorithms
 
             b.Show();
 
-            if (b.Contains(12))
+            if (b.Contains(200))
             {
-                global::System.Console.WriteLine("yes"); 
+                Console.WriteLine("yes"); 
             }
             else
             {
-                global::System.Console.WriteLine("no"); 
+                Console.WriteLine("no"); 
             }
         }
     }
