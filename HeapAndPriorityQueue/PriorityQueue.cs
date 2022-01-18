@@ -1,4 +1,6 @@
-﻿namespace HeapAndPriorityQueue
+﻿using System;
+
+namespace HeapAndPriorityQueue
 {
     public class PriorityQueue<T> : Heap<T> where T :IComparable<T>
     {

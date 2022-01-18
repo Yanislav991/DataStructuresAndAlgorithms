@@ -1,10 +1,12 @@
-﻿namespace DataStructuresAndAlgorithms
+﻿using Trees.B_Tree;
+
+namespace DataStructuresAndAlgorithms
 {
     class Program
     {
         static void Main(string[] args)
         {
-            BTree b = new BTree();
+            BTree<int> b = new BTree<int>();
             b.Insert(8);
             b.Insert(9);
             b.Insert(10);
@@ -15,13 +17,13 @@
 
             b.Show();
 
-            if (b.Contain(12))
+            if (b.Contains(12))
             {
-                global::System.Console.WriteLine("no"); 
+                global::System.Console.WriteLine("yes"); 
             }
             else
             {
-                global::System.Console.WriteLine("yes"); 
+                global::System.Console.WriteLine("no"); 
             }
         }
     }

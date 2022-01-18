@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace Trees.B_Tree
 {
-    public class Node<T>
+    public class Node<T> where T : IComparable<T>
     {
-        private int T = 3; // value should be the same inside the tree;
+        // value should be the same inside the tree;
+        private static int MinDeg = 3;
         public Node()
         {
 
         }
-        public int KeyNumber { get; set; }
-        public T[] Keys { get; set; } = new T[2 * T - 1];
-        public Node<T>[] Children { get; set; } = new Node<T>[2 * T];
+        public int KeysNumber { get; set; }
+        public T[] Keys { get; set; } = new T[2 * MinDeg - 1];
+        public Node<T>[] Children { get; set; } = new Node<T>[2 * MinDeg];
         public bool IsLeaf { get; set; } = false;
-        public T Find(T value)
+        public int Find(T value)
         {
-            for (int i = 0; i < this.KeyNumber; i++)
+            for (int i = 0; i < this.KeysNumber; i++)
             {
-                if (this.Children[i].CompareTo(value) == 0)
+                if (this.Keys[i].CompareTo(value) == 0)
                 {
                     return i;
                 }

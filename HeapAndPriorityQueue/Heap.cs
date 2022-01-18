@@ -1,4 +1,7 @@
-﻿namespace HeapAndPriorityQueue
+﻿using System;
+using System.Collections.Generic;
+
+namespace HeapAndPriorityQueue
 {
     public class Heap<T> where T : IComparable<T>
     {
