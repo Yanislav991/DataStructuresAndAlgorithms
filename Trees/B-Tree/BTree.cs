@@ -153,7 +153,27 @@ namespace Trees.B_Tree
                 return false;
             }
         }
-       
+
         //TODO : Remove
+        //TEST
+        //BTree<int> b = new BTree<int>();
+        //b.Insert(8);
+        //    b.Insert(9);
+        //    b.Insert(10);
+        //    b.Insert(11);
+        //    b.Insert(15);
+        //    b.Insert(20);
+        //    b.Insert(17);
+
+        //    b.Show();
+
+        //    if (b.Contains(200))
+        //    {
+        //        Console.WriteLine("yes"); 
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("no"); 
+        //    }
     }
 }

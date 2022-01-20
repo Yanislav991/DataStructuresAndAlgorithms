@@ -1,4 +1,5 @@
 ﻿using System;
+using Trees.AVL_Tree;
 using Trees.B_Tree;
 
 namespace DataStructuresAndAlgorithms
@@ -7,25 +8,17 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            BTree<int> b = new BTree<int>();
-            b.Insert(8);
-            b.Insert(9);
-            b.Insert(10);
-            b.Insert(11);
-            b.Insert(15);
-            b.Insert(20);
-            b.Insert(17);
-
-            b.Show();
-
-            if (b.Contains(200))
-            {
-                Console.WriteLine("yes"); 
-            }
-            else
-            {
-                Console.WriteLine("no"); 
-            }
+            var avl = new AVLTree<int>();
+            avl.Add(5);
+            avl.Add(6);
+            avl.Add(7);
+            avl.Add(3);
+            avl.Add(8);
+            avl.Add(9);
+            avl.Add(10);
+            Console.WriteLine(avl.Contains(5));
+            Console.WriteLine(avl.Contains(50));
+            avl.Show();
         }
     }
 }
