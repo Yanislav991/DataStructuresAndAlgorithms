@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Trees.AVL_Tree
 {
@@ -199,3 +196,15 @@ namespace Trees.AVL_Tree
 
     }
 }
+//TEST
+//var avl = new AVLTree<int>();
+//avl.Add(5);
+//avl.Add(6);
+//avl.Add(7);
+//avl.Add(3);
+//avl.Add(8);
+//avl.Add(9);
+//avl.Add(10);
+//Console.WriteLine(avl.Contains(5));
+//Console.WriteLine(avl.Contains(50));
+//avl.Show();

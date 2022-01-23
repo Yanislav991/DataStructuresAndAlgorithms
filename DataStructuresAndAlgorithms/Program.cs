@@ -1,6 +1,7 @@
 ﻿using System;
 using Trees.AVL_Tree;
 using Trees.B_Tree;
+using Trees.RedBlack_Tree;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -8,17 +9,12 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var avl = new AVLTree<int>();
-            avl.Add(5);
-            avl.Add(6);
-            avl.Add(7);
-            avl.Add(3);
-            avl.Add(8);
-            avl.Add(9);
-            avl.Add(10);
-            Console.WriteLine(avl.Contains(5));
-            Console.WriteLine(avl.Contains(50));
-            avl.Show();
+            var tree = new RedBlackTree<int>();
+            for (int i = 1; i < 10; i++)
+            {
+                tree.Insert(i);
+            }
+            tree.PrintTree(10);
         }
     }
 }
