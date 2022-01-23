@@ -26,9 +26,9 @@ namespace Trees.RedBlack_Tree
                 this.Root = Insert(this.Root, value);
             }
         }
-        public void PrintTree(int spaces = 0)
+        public void PrintTree()
         {
-            this.PrintTree(this.Root, spaces);
+            this.PrintTree(this.Root, 0);
         }
 
         private void PrintTree(Node<T> node, int spaces)

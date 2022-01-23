@@ -162,7 +162,69 @@ namespace Trees.AVL_Tree
 
         private Node<T> Delete(Node<T> node, T value)
         {
-            throw new NotImplementedException();
+            Node<T> parent;
+            if(node == null) return null;
+
+            if (value.CompareTo(node.Data) < 0)
+            {
+                node.LeftChild = Delete(node.LeftChild, value);
+                if (GetBalanceFactor(node) == -2)
+                {
+                    if (GetBalanceFactor(node.RightChild) <= 0)
+                    {
+                        node = RotateRR(node);
+                    }
+                    else
+                    {
+                        node = RotateRL(node);
+                    }
+                }
+            }
+            else if (value.CompareTo(node.Data) > 0)
+            {
+                node.RightChild = Delete(node.RightChild, value);
+                if (GetBalanceFactor(node) == 2)
+                {
+                    if (GetBalanceFactor(node.LeftChild) >= 0)
+                    {
+                        node = RotateLL(node);
+                    }
+                    else
+                    {
+                        node = RotateLR(node);
+                    }
+                }
+            }
+            else //NOT SUCH VALUE
+            {
+                if (node.RightChild != null)
+                {
+                    parent = node.RightChild;
+                    while (parent.LeftChild != null)
+                    {
+                        parent = parent.LeftChild;
+                    }
+                    node.Data = parent.Data;
+                    node.RightChild = Delete(node.RightChild, parent.Data);
+                    if (GetBalanceFactor(node) == 2)
+                    {
+                        if (GetBalanceFactor(node.LeftChild) >= 0)
+                        {
+                            node = RotateLL(node);
+                        }
+                        else
+                        {
+                            node = RotateLR(node);
+                        }
+                    }
+                }
+                else
+                {
+                    return node.LeftChild;
+                }
+            }
+            return node;
+           
         }
         private Node<T> RotateRL(Node<T> current)
         {
@@ -193,6 +255,20 @@ namespace Trees.AVL_Tree
             newParent.RightChild = current;
             return newParent;
         }
+        public void PrintTree()
+        {
+            this.PrintTree(this.Root, 0);
+        }
+
+        private void PrintTree(Node<T> node, int spaces)
+        {
+            if (node == null) return;
+            PrintTree(node.LeftChild, spaces + 5);
+            Console.Write(new string(' ', spaces));
+            Console.WriteLine(node);
+            PrintTree(node.RightChild, spaces + 5);
+        }
+
 
     }
 }

@@ -9,12 +9,13 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var tree = new RedBlackTree<int>();
-            for (int i = 1; i < 10; i++)
-            {
-                tree.Insert(i);
-            }
-            tree.PrintTree(10);
+            AVLTree<int> tree = new AVLTree<int>();
+            tree.Add(5);
+            tree.Add(3);
+            tree.Add(7);
+            tree.Add(2);
+            tree.Delete(7);
+            tree.PrintTree();
         }
     }
 }

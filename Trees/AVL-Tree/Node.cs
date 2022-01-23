@@ -9,5 +9,9 @@
         public T Data { get; set; }
         public Node<T> LeftChild { get; set; }
         public Node<T> RightChild { get; set; }
+        public override string ToString()
+        {
+            return $"{this.Data}";
+        }
     }
 }
