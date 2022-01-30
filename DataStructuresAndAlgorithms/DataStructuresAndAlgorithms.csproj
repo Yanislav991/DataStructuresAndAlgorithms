@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HashSet\HashSet.csproj" />
     <ProjectReference Include="..\LinearDataStructures\LinearDataStructures.csproj" />
     <ProjectReference Include="..\Trees\Trees.csproj" />
   </ItemGroup>
