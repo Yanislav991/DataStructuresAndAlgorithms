@@ -1,4 +1,6 @@
 ﻿using Excercises;
+using Sorting;
+using System;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -6,7 +8,9 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            QueenSolver.Solve();
+            ISorter sorter = new MergeSorter();
+            var sortedArr = sorter.Sort(new int[] { 2, 1, 3, 1 });
+            Console.WriteLine(String.Join(", ", sortedArr));
         }
     }
 }

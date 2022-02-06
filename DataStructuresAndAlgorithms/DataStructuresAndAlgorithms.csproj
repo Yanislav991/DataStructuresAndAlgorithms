@@ -9,6 +9,7 @@
     <ProjectReference Include="..\Excercises\Excercises.csproj" />
     <ProjectReference Include="..\HashSet\HashSet.csproj" />
     <ProjectReference Include="..\LinearDataStructures\LinearDataStructures.csproj" />
+    <ProjectReference Include="..\Sorting\Sorting.csproj" />
     <ProjectReference Include="..\Trees\Trees.csproj" />
   </ItemGroup>
 
